@@ -1,12 +1,13 @@
 #!/bin/bash
-set -e
+# This script is intended to run the application
 
-# Pull the latest version of the Docker image
-docker pull laylmah/final-python-ex2:2-a04eadf1e70cf54755c3c6afb04f0a20e11624bc
+# Load the Docker image
+docker build -t laylmah/final-python-ex2:2
 
 # Run the Docker container
-docker run -d --name my_app_container -p 80:80 laylmah/final-python-ex2:2-a04eadf1e70cf54755c3c6afb04f0a20e11624bc
+docker run -d -p 80:80 laylmah/final-python-ex2:2
 
-echo "Application is running."
+# Optionally, add commands to wait for the application to fully start
+# e.g., waiting for a specific log entry or listening on a port
 
 
