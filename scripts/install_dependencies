@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+# Update installed packages and install necessary system utilities
+sudo yum update -y
+sudo yum install -y git curl
+
+# Install Docker
+sudo amazon-linux-extras install docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+
+# Ensure docker starts on every system reboot
+sudo systemctl enable docker
+
+
