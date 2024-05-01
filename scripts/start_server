@@ -1,4 +1,4 @@
 #!/bin/bash
-docker run -itd --name final-python -p 6064:5000 laylamahameed/final-python-ex2:latest
+docker run -itd --name final-python -p 5000:5000 laylamahameed/final-python-ex2:latest
 
 
